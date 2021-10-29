@@ -1,11 +1,18 @@
-import "./App.css";
 import { useState } from "react";
 import { ethers } from "ethers";
-import Greeter from "./artifacts/contracts/Greeter.sol/Greeter.json";
-import Token from "./artifacts/contracts/Token.sol/NDToken.json";
+import Greeter from "../src/artifacts/contracts/Greeter.sol/Greeter.json";
+import Token from "../src/artifacts/contracts/Token.sol/TrevToken.json";
+// import Container from "../components/greeter/greeter";
 
-const greeterAddress = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
-const tokenAddress = "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6";
+// Update with the contract address logged out to the CLI when it was deployed
+// Local
+// const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+// const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+
+// Ropsten
+// Deployed w/ 0x3DC091C82df597939CF115D1334E7a2885F50Ab8
+const greeterAddress = "0x1a4f776d70D734a70cdcedd3C23479C9435Cf83E";
+const tokenAddress = "0x387Aef27fc3D8617a7DB2C777525Ebf59EFD9628";
 
 function App() {
   const [greeting, setGreetingValue] = useState();
@@ -73,18 +80,26 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button onClick={fetchGreeting}>Fetch Greeting</button>
-        <button onClick={setGreeting}>Set Greeting</button>
+    <div className=" bg-blue-200 ">
+      <header className=" flex flex-col min-h-screen items-center justify-center ">
+        <button className="btn" onClick={fetchGreeting}>
+          Fetch Greeting
+        </button>
+        <button className="btn" onClick={setGreeting}>
+          Set Greeting
+        </button>
         <input
           onChange={(e) => setGreetingValue(e.target.value)}
           placeholder="Set greeting"
         />
 
         <br />
-        <button onClick={getBalance}>Get Balance</button>
-        <button onClick={sendCoins}>Send Coins</button>
+        <button className="btn" onClick={getBalance}>
+          Get Balance
+        </button>
+        <button className="btn" onClick={sendCoins}>
+          Send Coins
+        </button>
         <input
           onChange={(e) => setUserAccount(e.target.value)}
           placeholder="Account ID"

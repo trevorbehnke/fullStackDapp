@@ -8,7 +8,7 @@ async function main() {
   const Greeter = await hre.ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy("Hello, World!");
 
-  const Token = await hre.ethers.getContractFactory("NDToken");
+  const Token = await hre.ethers.getContractFactory("TrevToken");
   const token = await Token.deploy();
 
   await greeter.deployed();
