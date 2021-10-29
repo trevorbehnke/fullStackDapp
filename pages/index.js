@@ -6,13 +6,13 @@ import Token from "../src/artifacts/contracts/Token.sol/TrevToken.json";
 
 // Update with the contract address logged out to the CLI when it was deployed
 // Local
-const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+// const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+// const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
 // Ropsten
 // Deployed w/ 0x3DC091C82df597939CF115D1334E7a2885F50Ab8
-// const greeterAddress = "0x1a4f776d70D734a70cdcedd3C23479C9435Cf83E";
-// const tokenAddress = "0x387Aef27fc3D8617a7DB2C777525Ebf59EFD9628";
+const greeterAddress = "0x1a4f776d70D734a70cdcedd3C23479C9435Cf83E";
+const tokenAddress = "0x387Aef27fc3D8617a7DB2C777525Ebf59EFD9628";
 
 function App() {
   const [greeting, setGreetingValue] = useState();
